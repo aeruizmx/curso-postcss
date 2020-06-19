@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/andres87mx/curso-postcss#readme",
   "dependencies": {
+    "autoprefixer": "^9.8.0",
     "postcss-cli": "^7.1.1"
   }
 }
