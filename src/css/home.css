@@ -63,6 +63,13 @@ body {
 
 /*Logo*/
 .logo {
+  width: calc(100% - 100px);
+  margin: 0 auto;
+  background-image: image-set(url('../../src/images/platzi-video.png') 1x, url('../../src/images/platzi-video.png') 2x);
+  height: 40px;
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
 
 }
 .logo-image {
