@@ -23,6 +23,7 @@ module.exports = {
 					},
 					customProperties: false
 		}),
-		require('css-mqpacker')
+		require('css-mqpacker'),
+		require('cssnano')
   ]
 }
