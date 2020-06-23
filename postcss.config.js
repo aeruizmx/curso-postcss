@@ -1,6 +1,13 @@
 module.exports = {
 	plugins: [
-		require('postcss-import')({
+		require('postcss-import'),
+		require('postcss-font-magician')({
+			variants:{
+				'Lato':{
+					'300':[],
+					'400':[],
+				}
+			}
 		}),
 		require('postcss-apply'),
 		require('postcss-custom-selector'),
