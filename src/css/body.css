@@ -1,0 +1,10 @@
+body {
+  margin: 0;
+  font-family: 'Lato', system-ui;
+  @media (--small){
+    border: 10px solid blue;
+  }
+  @media (--extra-small){
+    border: 10px solid orange;
+  }
+}

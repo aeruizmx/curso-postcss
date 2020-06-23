@@ -1,13 +1,11 @@
-body {
-  margin: 0;
-  font-family: 'Lato', system-ui;
-  @media (--small){
-    border: 10px solid blue;
-  }
-  @media (--extra-small){
-    border: 10px solid orange;
-  }
-}
+@import "./body.css";
+@import "./featuring.css";
+@import "./home-layout.css";
+@import "./sidebar.css";
+@import "./logo.css";
+@import "./playlist.css";
+@import "./playlist-friends.css";
+
 :root {
   --darkColor: #15192a;
   --lightColor: white;
@@ -58,150 +56,18 @@ body {
   color: white;
 }
 
-/*home layout*/
-.home {
-  background: var(--lightColor);
-  display: grid;
-  height: calc(50vh * 2);
-  grid-template-columns: 350px 1fr;
-  grid-template-rows: 1fr 150px;
-  grid-template-areas: "sidebar primary"
-                       "sidebar featuring";
-  @media (--small){
-    height: auto;
-    grid-template-columns:  1fr;
-    grid-template-rows: auto auto 150px;
-    grid-template-areas: "primary"
-                         "sidebar"
-                         "featuring";
-  }
-}
-
-.home-sidebar {
-  grid-area: sidebar;
-}
-.home-primary {
-  grid-area: primary;
-}
-.home-featuring {
-  grid-area: featuring;
-}
-
-/*Sidebar*/
-.sidebar {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: auto 1fr 1fr;
-  background: var(--darkColor);
-  color: white;
-  padding: 1em;
-  box-sizing: border-box;
-  height: 100vh;
-  overflow: auto;
-  /* background: color(black alpha(50%) contrast(50%)); */
-  /* background: hwb(hue, whiteness, blackness); */
-  /* background: hwb(0 -360, 0 - 100%, 0 - 100%, opacidad); */
-  background: hwb(230, 8%, 82%, 1);
-  /* background: gray(0 - 255); */
-  background: gray(204);
-}
-
-/*Logo*/
-.logo {
-  width: calc(100% - 100px);
-  margin: 0 auto;
-  background-image: image-set(url('../../src/images/platzi-video.png') 1x, url('../../src/images/platzi-video.png') 2x);
-  height: 40px;
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
-
-}
-.logo-image {
-  margin: 0;
-}
-.logo-image img {
-  max-width: 100%;
-}
-
-.sidebarPlaylist {
-  overflow: auto;
-}
-
-/*myPlaylist*/
-
-.myPlaylist {
-  padding: 0 20px;
-}
-
-.myPlaylist :any-link:hover{
-  color: color(peru l(80%) s(50%));
-  transform: scale(1.1);
-}
-
-.myPlaylist-item {
-  
-  & a {
-    color: white;
-    text-decoration: none;
-    font-size: .8em;
-    display: block;
-    margin-bottom: 7px;
-    &:hover {
-      text-decoration: underline;
-    }
-  }
-  &:last-child a {
-    margin-bottom: 0;
-  }
-  @nest .myPlaylist & {
-    border: 5px dashed blue;
-  }
-}
-
-.myPlaylist-item:matches(:last-child, :nth-of-type(3), :first-child){
-  background: color(red l(70%));
-}
-.myPlaylist-item:not(:last-child, :nth-of-type(3), :first-child){
-  background: color(blue l(80%));
-}
 
 
-/*playlistFriends*/
 
-.playlistFriends {
-  padding: 0;
-}
 
-.playlistFriends-item {
-  color: white;
-}
 
-.playlistFriends-item {
-  display: flex;
-  margin-bottom: 7px;
-  font-size: .8em;
-}
-.playlistFriends-item a {
-  display: inline-flex;
-  align-items: center;
-  color: white;
-  text-decoration: none;
-}
-.playlistFriends-item:hover a {
-  text-decoration: underline;
-}
 
-.playlistFriends-item img {
-  width: 35px;
-  height: 35px;
-  border-radius: 50%;
-  margin-right: 10px;
-}
 
-.playlistFriends-item span {
-  display: inline-block;
-}
+
+
+
+
+
 
 
 .home-primary {
@@ -294,33 +160,7 @@ body {
 }
 
 
-.featuring {
-  background: linear-gradient(to right, #ff0000, #ff458b);
-  display: flex;
-  height: 100%;
-  align-items: center;
-  padding-left: 100px;
-  color: white;
-  @media (--small){
-    position: fixed;
-    bottom: 0 ;
-    left: 0;
-    right: 0;
-    height: 150px;
-  }
-}
 
-.featuring-image {
-  margin-right: 20px;
-}
-
-.featuring-title {
-  margin: 10px;
-}
-.featuring-album {
-  font-size: 1.3em;
-  margin: 10px;
-}
 
 /* @custom-media --small screen and (max-width: 768px); */
 @custom-media --extra-small screen and (width < 480px);
