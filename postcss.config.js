@@ -2,8 +2,10 @@ module.exports = {
 	plugins: [
      		require('postcss-preset-env')({
       			autoprefixer: {
-        			grid:true,
-       			}
+							grid:true,
+							flexbox:false,
+						 },
+						 customProperties: false
      		})
   ]
 }
