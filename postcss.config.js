@@ -22,6 +22,7 @@ module.exports = {
 					flexbox:false,
 					},
 					customProperties: false
-		})
+		}),
+		require('css-mqpacker')
   ]
 }
